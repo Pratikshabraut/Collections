@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class ReverseArrayList {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        numbers.add(50);
+
+        int left = 0;
+        int right = numbers.size() - 1;
+
+        while (left < right) {
+
+            int temp = numbers.get(left);
+            numbers.set(left, numbers.get(right));
+            numbers.set(right, temp);
+
+            left++;
+            right--;
+        }
+
+        System.out.println(numbers);
+    }
+}
