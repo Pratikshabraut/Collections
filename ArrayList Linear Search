@@ -1,0 +1,30 @@
+
+import java.util.ArrayList;
+
+public class ArrayListLinearSearch {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        numbers.add(50);
+
+        int target = 30;
+        boolean found = false;
+
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) == target) {
+                System.out.println("Element found at index " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Element not found");
+        }
+    }
+}
